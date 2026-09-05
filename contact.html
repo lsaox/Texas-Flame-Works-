@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Contact Texas Flame Works for fireplace consultations, product guidance, technical support, and project planning throughout Dallas–Fort Worth."
+  >
+
+  <title>Contact | Texas FlameWorks</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Rye&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --black: #080908;
+      --white: #f4f0e8;
+      --muted: rgba(244, 240, 232, .55);
+      --line: rgba(244, 240, 232, .15);
+      --teal: #0f292e;
+      --ease: cubic-bezier(.22, .78, .24, 1);
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      min-height: 100vh;
+
+      background: var(--black);
+      color: var(--white);
+
+      font-family: "DM Sans", sans-serif;
+
+      overflow-x: hidden;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+
+    /* =========================================================
+       BACKGROUND
+    ========================================================== */
+
+    .page-background {
+      position: fixed;
+      inset: 0;
+
+      z-index: -10;
+
+      background:
+        #080908;
+    }
+
+
+    .page-background::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        url("assets/contact-fireplace.jpg")
+        center center / cover
+        no-repeat;
+
+      opacity: .14;
+
+      filter:
+        grayscale(75%)
+        contrast(1.05);
+
+      transform: scale(1.03);
+    }
+
+
+    .page-background::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(8, 9, 8, .76) 0%,
+          rgba(8, 9, 8, .84) 42%,
+          rgba(8, 9, 8, .96) 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(8, 9, 8, .82) 0%,
+          rgba(8, 9, 8, .57) 50%,
+          rgba(8, 9, 8, .82) 100%
+        );
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================== */
+
+    .contact-header {
+      position: relative;
+      z-index: 20;
+
+      width: 100%;
+
+      border-bottom:
+        1px solid rgba(244, 240, 232, .12);
+
+      background:
+        rgba(8, 9, 8, .58);
+
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+
+    .contact-header-inner {
+      width:
+        min(
+          1480px,
+          calc(100% - 9vw)
+        );
+
+      min-height: 88px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+      align-items: center;
+    }
+
+
+    .contact-back,
+    .contact-work {
+      color:
+        rgba(244, 240, 232, .58);
+
+      font-size: .56rem;
+      font-weight: 600;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+      transition:
+        color .3s ease,
+        transform .3s ease;
+    }
+
+
+    .contact-back {
+      justify-self: start;
+    }
+
+
+    .contact-work {
+      justify-self: end;
+    }
+
+
+    .contact-back:hover {
+      color: #fff;
+
+      transform: translateX(-4px);
+    }
+
+
+    .contact-work:hover {
+      color: #fff;
+    }
+
+
+    .contact-brand {
+      justify-self: center;
+
+      display: flex;
+      align-items: center;
+
+      gap: 11px;
+    }
+
+
+    .contact-brand-mark {
+      font-family: "Rye", serif;
+
+      font-size: 1.45rem;
+
+      letter-spacing: -.08em;
+    }
+
+
+    .contact-brand-name {
+      font-size: .82rem;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       PAGE
+    ========================================================== */
+
+    .contact-page {
+      position: relative;
+
+      min-height:
+        calc(100vh - 88px);
+
+      padding:
+        clamp(85px, 9vw, 135px)
+        0
+        65px;
+    }
+
+
+    .contact-page::before {
+      content: "";
+
+      position: absolute;
+
+      top: 100px;
+      left: 50%;
+
+      width: 420px;
+      height: 420px;
+
+      border:
+        1px solid
+        rgba(244, 240, 232, .035);
+
+      transform:
+        translateX(-50%)
+        rotate(45deg);
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================================
+       CENTERED CONTAINER
+    ========================================================== */
+
+    .contact-inner {
+      position: relative;
+      z-index: 5;
+
+      width:
+        min(
+          680px,
+          calc(100% - 40px)
+        );
+
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       INTRO
+    ========================================================== */
+
+    .contact-copy {
+      width: 100%;
+
+      margin:
+        0 auto
+        65px;
+    }
+
+
+    .contact-kicker {
+      margin-bottom: 24px;
+
+      color:
+        rgba(244, 240, 232, .44);
+
+      font-size: .53rem;
+      font-weight: 600;
+
+      letter-spacing: .23em;
+
+      text-transform: uppercase;
+    }
+
+
+    .contact-title {
+      margin:
+        0 auto
+        28px;
+
+      font-family:
+        "Libre Caslon Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          4rem,
+          7vw,
+          7rem
+        );
+
+      font-weight: 400;
+
+      line-height: .88;
+
+      letter-spacing: -.055em;
+    }
+
+
+    .contact-lead {
+      max-width: 510px;
+
+      margin: 0 auto;
+
+      color:
+        rgba(244, 240, 232, .57);
+
+      font-size: .9rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       META
+    ========================================================== */
+
+    .contact-meta {
+      max-width: 520px;
+
+      margin:
+        42px auto
+        0;
+
+      padding-top: 24px;
+
+      border-top:
+        1px solid
+        rgba(244, 240, 232, .14);
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
+      gap: 30px;
+
+      text-align: center;
+    }
+
+
+    .contact-meta-label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color:
+        rgba(244, 240, 232, .31);
+
+      font-size: .47rem;
+      font-weight: 600;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+    }
+
+
+    .contact-meta-value {
+      display: block;
+
+      color:
+        rgba(244, 240, 232, .73);
+
+      font-size: .76rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       FORM
+    ========================================================== */
+
+    .contact-form-wrap {
+      width: 100%;
+      max-width: 650px;
+
+      margin: 0 auto;
+    }
+
+
+    .contact-form {
+      width: 100%;
+
+      text-align: left;
+
+      border-top:
+        1px solid
+        rgba(244, 240, 232, .19);
+    }
+
+
+    .field {
+      position: relative;
+
+      padding:
+        23px
+        3px
+        19px;
+
+      border-bottom:
+        1px solid
+        rgba(244, 240, 232, .15);
+
+      transition:
+        border-color .35s ease;
+    }
+
+
+    .field:focus-within {
+      border-bottom-color:
+        rgba(244, 240, 232, .65);
+    }
+
+
+    .field label {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color:
+        rgba(244, 240, 232, .39);
+
+      font-size: .47rem;
+      font-weight: 600;
+
+      letter-spacing: .19em;
+
+      text-transform: uppercase;
+    }
+
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+
+      border: 0;
+      outline: 0;
+
+      background: transparent;
+
+      color: var(--white);
+
+      font-size:
+        clamp(
+          .93rem,
+          1.1vw,
+          1.02rem
+        );
+
+      line-height: 1.5;
+    }
+
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color:
+        rgba(244, 240, 232, .29);
+    }
+
+
+    .field select {
+      appearance: none;
+      -webkit-appearance: none;
+
+      cursor: pointer;
+
+      padding-right: 40px;
+    }
+
+
+    .field select option {
+      background: #0b0c0b;
+      color: #f4f0e8;
+    }
+
+
+    .field textarea {
+      min-height: 145px;
+
+      resize: vertical;
+    }
+
+
+    .field-select::after {
+      content: "⌄";
+
+      position: absolute;
+
+      right: 3px;
+      bottom: 21px;
+
+      color:
+        rgba(244, 240, 232, .42);
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================================
+       SUBMIT
+    ========================================================== */
+
+    .contact-submit-row {
+      margin-top: 36px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 25px;
+
+      text-align: center;
+    }
+
+
+    .contact-form-note {
+      max-width: 380px;
+
+      margin: 0 auto;
+
+      color:
+        rgba(244, 240, 232, .37);
+
+      font-size: .56rem;
+
+      line-height: 1.7;
+    }
+
+
+    .contact-submit {
+      min-width: 220px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      border:
+        1px solid
+        rgba(244, 240, 232, .34);
+
+      background:
+        rgba(8, 9, 8, .22);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+
+      color: #fff;
+
+      padding:
+        18px
+        22px;
+
+      cursor: pointer;
+
+      font-size: .55rem;
+      font-weight: 700;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+      transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        gap .35s ease;
+    }
+
+
+    .contact-submit:hover {
+      background: #f4f0e8;
+
+      border-color: #f4f0e8;
+
+      color: #080908;
+
+      gap: 32px;
+    }
+
+
+    /* =========================================================
+       BOTTOM
+    ========================================================== */
+
+    .contact-bottom {
+      position: relative;
+      z-index: 5;
+
+      width:
+        min(
+          680px,
+          calc(100% - 40px)
+        );
+
+      margin:
+        100px auto
+        0;
+
+      padding-top: 25px;
+
+      border-top:
+        1px solid
+        rgba(244, 240, 232, .11);
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 35px;
+
+      color:
+        rgba(244, 240, 232, .27);
+
+      font-size: .45rem;
+
+      letter-spacing: .17em;
+
+      text-align: center;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       ENTRANCE
+    ========================================================== */
+
+    @media (prefers-reduced-motion: no-preference) {
+
+      .contact-copy {
+        animation:
+          contactReveal
+          .9s
+          var(--ease)
+          both;
+      }
+
+
+      .contact-form-wrap {
+        animation:
+          contactReveal
+          .9s
+          var(--ease)
+          .15s
+          both;
+      }
+
+
+      @keyframes contactReveal {
+
+        from {
+          opacity: 0;
+
+          transform:
+            translateY(22px);
+        }
+
+        to {
+          opacity: 1;
+
+          transform:
+            translateY(0);
+        }
+
+      }
+
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================== */
+
+    @media (max-width: 950px) {
+
+      .contact-header-inner {
+        width:
+          calc(100% - 55px);
+      }
+
+
+      .contact-inner,
+      .contact-bottom {
+        width:
+          min(
+            680px,
+            calc(100% - 55px)
+          );
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================== */
+
+    @media (max-width: 650px) {
+
+      .contact-header-inner {
+        width:
+          calc(100% - 32px);
+
+        min-height: 74px;
+
+        grid-template-columns:
+          1fr
+          auto;
+      }
+
+
+      .contact-work {
+        display: none;
+      }
+
+
+      .contact-brand {
+        justify-self: end;
+      }
+
+
+      .contact-brand-mark {
+        font-size: 1.1rem;
+      }
+
+
+      .contact-brand-name {
+        font-size: .66rem;
+
+        letter-spacing: .09em;
+      }
+
+
+      .contact-back {
+        font-size: .5rem;
+      }
+
+
+      .contact-page {
+        min-height:
+          calc(100vh - 74px);
+
+        padding:
+          70px
+          0
+          50px;
+      }
+
+
+      .contact-inner {
+        width:
+          calc(100% - 32px);
+      }
+
+
+      .contact-copy {
+        margin-bottom: 55px;
+      }
+
+
+      .contact-kicker {
+        margin-bottom: 20px;
+      }
+
+
+      .contact-title {
+        font-size:
+          clamp(
+            3.8rem,
+            18vw,
+            5rem
+          );
+
+        line-height: .9;
+      }
+
+
+      .contact-lead {
+        max-width: 34ch;
+
+        font-size: .82rem;
+      }
+
+
+      .contact-meta {
+        grid-template-columns:
+          1fr
+          1fr;
+
+        gap: 14px;
+
+        margin-top: 36px;
+      }
+
+
+      .contact-meta-value {
+        font-size: .69rem;
+      }
+
+
+      .field {
+        padding:
+          21px
+          2px
+          17px;
+      }
+
+
+      .field input,
+      .field select,
+      .field textarea {
+        font-size: 16px;
+      }
+
+
+      .field textarea {
+        min-height: 130px;
+      }
+
+
+      .contact-submit {
+        width: 100%;
+      }
+
+
+      .contact-bottom {
+        width:
+          calc(100% - 32px);
+
+        margin-top: 75px;
+
+        flex-direction: column;
+
+        gap: 8px;
+      }
+
+
+      .page-background::before {
+        opacity: .12;
+
+        background-position:
+          center center;
+      }
+
+
+      .contact-page::before {
+        width: 250px;
+        height: 250px;
+
+        top: 90px;
+      }
+
+    }
+
+
+    @media (max-width: 390px) {
+
+      .contact-brand-name {
+        font-size: .59rem;
+      }
+
+
+      .contact-title {
+        font-size: 3.65rem;
+      }
+
+
+      .contact-meta {
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       LOW OPACITY FIREPLACE BACKGROUND
+  ========================================================== -->
+
+  <div
+    class="page-background"
+    aria-hidden="true"
+  ></div>
+
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header class="contact-header">
+
+    <div class="contact-header-inner">
+
+
+      <a
+        href="private-home.html"
+        class="contact-back"
+      >
+        ← Home
+      </a>
+
+
+      <a
+        href="private-home.html"
+        class="contact-brand"
+        aria-label="Texas Flame Works Home"
+      >
+
+        <span class="contact-brand-mark">
+          TF
+        </span>
+
+        <span class="contact-brand-name">
+          Texas FlameWorks
+        </span>
+
+      </a>
+
+
+      <a
+        href="work.html"
+        class="contact-work"
+      >
+        Our Work
+      </a>
+
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       CONTACT
+  ========================================================== -->
+
+  <main class="contact-page">
+
+
+    <div class="contact-inner">
+
+
+      <!-- INTRO -->
+
+      <section class="contact-copy">
+
+
+        <div class="contact-kicker">
+          Start a Project
+        </div>
+
+
+        <h1 class="contact-title">
+          Contact Us Today
+        </h1>
+
+
+        <p class="contact-lead">
+
+          Tell us about your project and where you are
+          in the process. We'll help you understand the
+          right fireplace, technical requirements and
+          next steps for your space.
+
+        </p>
+
+
+
+        <div class="contact-meta">
+
+
+          <div>
+
+            <span class="contact-meta-label">
+              Service Area
+            </span>
+
+            <span class="contact-meta-value">
+              Dallas–Fort Worth, Texas
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <span class="contact-meta-label">
+              Project Types
+            </span>
+
+            <span class="contact-meta-value">
+              Residential / Builder / Design / Trade
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- =====================================================
+           NETLIFY FORM
+      ====================================================== -->
+
+      <div class="contact-form-wrap">
+
+
+        <form
+          class="contact-form"
+          name="texas-flame-works-inquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+
+
+          <input
+            type="hidden"
+            name="form-name"
+            value="texas-flame-works-inquiry"
+          >
+
+
+          <!-- NETLIFY HONEYPOT -->
+
+          <p style="display:none;">
+
+            <label>
+              Don't fill this out:
+              <input name="bot-field">
+            </label>
+
+          </p>
+
+
+
+          <!-- NAME -->
+
+          <div class="field">
+
+            <label for="name">
+              Name
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- EMAIL -->
+
+          <div class="field">
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@email.com"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- PHONE -->
+
+          <div class="field">
+
+            <label for="phone">
+              Phone
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Your phone number"
+              autocomplete="tel"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- COMPANY -->
+
+          <div class="field">
+
+            <label for="company">
+              Company / Business
+            </label>
+
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Company name, if applicable"
+              autocomplete="organization"
+            >
+
+          </div>
+
+
+
+          <!-- CLIENT TYPE -->
+
+          <div class="field field-select">
+
+            <label for="client-type">
+              I Am A
+            </label>
+
+            <select
+              id="client-type"
+              name="client-type"
+              required
+            >
+
+              <option value="">
+                Select one
+              </option>
+
+              <option value="Homeowner">
+                Homeowner
+              </option>
+
+              <option value="Custom Home Builder">
+                Custom Home Builder
+              </option>
+
+              <option value="Interior Designer">
+                Interior Designer
+              </option>
+
+              <option value="Architect">
+                Architect
+              </option>
+
+              <option value="Contractor / Trade">
+                Contractor / Trade
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- PROJECT TYPE -->
+
+          <div class="field field-select">
+
+            <label for="project-type">
+              Project Type
+            </label>
+
+            <select
+              id="project-type"
+              name="project-type"
+              required
+            >
+
+              <option value="">
+                Select project type
+              </option>
+
+              <option value="New Construction">
+                New Construction
+              </option>
+
+              <option value="Fireplace Replacement">
+                Fireplace Replacement
+              </option>
+
+              <option value="Fireplace Upgrade">
+                Fireplace Upgrade
+              </option>
+
+              <option value="Remodel / Renovation">
+                Remodel / Renovation
+              </option>
+
+              <option value="Outdoor Fireplace">
+                Outdoor Fireplace
+              </option>
+
+              <option value="Builder / Multi-Home Project">
+                Builder / Multi-Home Project
+              </option>
+
+              <option value="Technical Consultation">
+                Technical Consultation
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- FIREPLACE TYPE -->
+
+          <div class="field field-select">
+
+            <label for="fireplace-type">
+              Fireplace Type
+            </label>
+
+            <select
+              id="fireplace-type"
+              name="fireplace-type"
+            >
+
+              <option value="">
+                Not sure yet
+              </option>
+
+              <option value="Gas">
+                Gas
+              </option>
+
+              <option value="Electric">
+                Electric
+              </option>
+
+              <option value="Wood Burning">
+                Wood Burning
+              </option>
+
+              <option value="Outdoor">
+                Outdoor
+              </option>
+
+              <option value="Need Recommendation">
+                I Need a Recommendation
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- PROJECT STAGE -->
+
+          <div class="field field-select">
+
+            <label for="project-stage">
+              Where Are You In The Process?
+            </label>
+
+            <select
+              id="project-stage"
+              name="project-stage"
+              required
+            >
+
+              <option value="">
+                Select project stage
+              </option>
+
+              <option value="Exploring Options">
+                Exploring Options
+              </option>
+
+              <option value="Design Phase">
+                Design Phase
+              </option>
+
+              <option value="Plans Completed">
+                Plans Completed
+              </option>
+
+              <option value="Framing Started">
+                Framing Started
+              </option>
+
+              <option value="Construction Underway">
+                Construction Underway
+              </option>
+
+              <option value="Ready to Purchase">
+                Ready to Purchase
+              </option>
+
+              <option value="Existing Fireplace">
+                Existing Fireplace / Remodel
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- TIMELINE -->
+
+          <div class="field field-select">
+
+            <label for="timeline">
+              Project Timeline
+            </label>
+
+            <select
+              id="timeline"
+              name="timeline"
+            >
+
+              <option value="">
+                Select estimated timeline
+              </option>
+
+              <option value="ASAP">
+                ASAP
+              </option>
+
+              <option value="Within 30 Days">
+                Within 30 Days
+              </option>
+
+              <option value="1-3 Months">
+                1–3 Months
+              </option>
+
+              <option value="3-6 Months">
+                3–6 Months
+              </option>
+
+              <option value="6+ Months">
+                6+ Months
+              </option>
+
+              <option value="Planning Only">
+                Planning Only
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- LOCATION -->
+
+          <div class="field">
+
+            <label for="location">
+              Project Location
+            </label>
+
+            <input
+              type="text"
+              id="location"
+              name="project-location"
+              placeholder="City, Texas"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- SIZE -->
+
+          <div class="field">
+
+            <label for="size">
+              Desired Fireplace Size
+            </label>
+
+            <input
+              type="text"
+              id="size"
+              name="desired-size"
+              placeholder='Example: 60", 72", 84" or not sure'
+            >
+
+          </div>
+
+
+
+          <!-- BRAND -->
+
+          <div class="field field-select">
+
+            <label for="brand">
+              Brand Preference
+            </label>
+
+            <select
+              id="brand"
+              name="brand-preference"
+            >
+
+              <option value="">
+                No preference / Need guidance
+              </option>
+
+              <option value="Montigo">
+                Montigo
+              </option>
+
+              <option value="Flare">
+                Flare
+              </option>
+
+              <option value="Stellar">
+                Stellar
+              </option>
+
+              <option value="RH Peterson">
+                RH Peterson
+              </option>
+
+              <option value="Majestic">
+                Majestic
+              </option>
+
+              <option value="Napoleon">
+                Napoleon
+              </option>
+
+              <option value="Empire">
+                Empire
+              </option>
+
+              <option value="Dimplex">
+                Dimplex
+              </option>
+
+              <option value="Modern Flames">
+                Modern Flames
+              </option>
+
+              <option value="SimpliFire">
+                SimpliFire
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- PROJECT DETAILS -->
+
+          <div class="field">
+
+            <label for="message">
+              Tell Us About The Project
+            </label>
+
+            <textarea
+              id="message"
+              name="project-details"
+              placeholder="Tell us about the home, fireplace location, design direction, construction stage, or anything else that would help us understand the project."
+              required
+            ></textarea>
+
+          </div>
+
+
+
+          <!-- REFERRAL -->
+
+          <div class="field field-select">
+
+            <label for="referral">
+              How Did You Hear About Us?
+            </label>
+
+            <select
+              id="referral"
+              name="referral-source"
+            >
+
+              <option value="">
+                Select one
+              </option>
+
+              <option value="Google">
+                Google
+              </option>
+
+              <option value="Instagram">
+                Instagram
+              </option>
+
+              <option value="Builder">
+                Builder
+              </option>
+
+              <option value="Designer">
+                Designer
+              </option>
+
+              <option value="Architect">
+                Architect
+              </option>
+
+              <option value="Referral">
+                Referral
+              </option>
+
+              <option value="Existing Client">
+                Existing Client
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- SUBMIT -->
+
+          <div class="contact-submit-row">
+
+
+            <p class="contact-form-note">
+
+              Send us the project details and we'll reach out
+              to discuss fireplace options, technical requirements
+              and next steps.
+
+            </p>
+
+
+            <button
+              type="submit"
+              class="contact-submit"
+            >
+
+              Send Inquiry
+
+              <span>
+                ↗
+              </span>
+
+            </button>
+
+
+          </div>
+
+
+        </form>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BOTTOM
+    ====================================================== -->
+
+    <div class="contact-bottom">
+
+      <span>
+        © 2026 Texas FlameWorks
+      </span>
+
+      <span>
+        Dallas–Fort Worth, Texas
+      </span>
+
+    </div>
+
+
+  </main>
+<style>/* =========================================================
+   FULL PAGE FIREPLACE BACKGROUND
+========================================================= */
+
+.page-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #080908;
+  pointer-events: none;
+}
+
+/* PHOTO */
+.page-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("assets/masonry.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: .18;
+
+  filter:
+    grayscale(55%)
+    contrast(1.05)
+    brightness(.8);
+
+  transform: scale(1.02);
+}
+
+/* DARK LUXURY OVERLAY */
+.page-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(8, 9, 8, .38) 0%,
+      rgba(8, 9, 8, .68) 48%,
+      rgba(8, 9, 8, .90) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 9, 8, .52) 0%,
+      rgba(8, 9, 8, .70) 45%,
+      rgba(8, 9, 8, .94) 100%
+    );
+}
+
+/* MAKE BODY TRANSPARENT SO IMAGE SHOWS */
+body {
+  min-height: 100vh;
+  background: transparent;
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/* CONTACT AREA ALSO TRANSPARENT */
+.contact-page {
+  position: relative;
+  min-height: calc(100vh - 88px);
+
+  padding:
+    clamp(85px, 9vw, 135px)
+    0
+    65px;
+
+  background: transparent;
+}</style>
+
+</body>
+</html>
