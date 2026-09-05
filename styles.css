@@ -1809,166 +1809,158 @@ text {
 }
 
 /* =========================================================
-   FINAL HARD FIX — REMOVE MOBILE DEAD SPACE
-   This intentionally hides the separate Who We Serve image
-   on phones because its reserved 470px box was creating the
-   giant empty black block before the mission section.
+   FINAL REQUESTED FIXES ONLY
+   - Preserve original photos
+   - Keep original hamburger
+   - No arrows beside nav words
+   - SVG arrows only on CTA buttons
+   - True centered mobile copy
+   - Small numbers do not offset centered text
+   - Remove Who We Serve dead space WITHOUT removing its photo
+   - Photo background behind What We Stand For
 ========================================================= */
 
+/* -------- CLEAN SVG CTA ARROWS -------- */
+.tfw-arrow-svg {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  flex: 0 0 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+.tfw-arrow-svg path {
+  fill: none;
+  stroke: currentColor;
+}
+
+/* Navigation words intentionally have no arrows. */
+.menu-arrow {
+  display: none !important;
+}
+
+/* Preserve the original hamburger bars exactly as a hamburger. */
+.menu-button .menu-lines {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.menu-button .menu-lines span {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* -------- WHAT WE STAND FOR BACKGROUND PHOTO -------- */
+.tfw-values {
+  position: relative !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 6, 5, .91) 0%,
+      rgba(5, 6, 5, .84) 46%,
+      rgba(5, 6, 5, .93) 100%
+    ),
+    url("assets/masonry.jpeg") center / cover no-repeat !important;
+}
+
+.tfw-values-inner,
+.tfw-values-geometry {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------- MOBILE -------- */
 @media (max-width: 760px) {
 
-  .tfw-serve {
-    padding-bottom: 34px !important;
+  /* True center for main section copy. */
+  .hero-content,
+  .tfw-about-copy,
+  .tfw-values-top,
+  .tfw-values-intro,
+  .tfw-brands-header,
+  .tfw-brands-copy,
+  .tfw-serve-copy,
+  .tfw-mission-content,
+  .tfw-mission-v2-copy,
+  .tfw-faq-intro,
+  .tfw-footer-cta,
+  .tfw-final-footer-inner {
+    text-align: center !important;
   }
 
-  .tfw-serve-inner {
-    width: calc(100% - 32px) !important;
+  .hero-title,
+  .hero-description,
+  .tfw-about-title,
+  .tfw-about-lead,
+  .tfw-about-body,
+  .tfw-values-title,
+  .tfw-values-intro,
+  .tfw-value-title,
+  .tfw-value-description,
+  .tfw-brands-title,
+  .tfw-brands-copy,
+  .tfw-serve-title,
+  .tfw-mission-title,
+  .tfw-mission-text,
+  .tfw-mission-v2-title,
+  .tfw-mission-v2-text,
+  .tfw-faq-title,
+  .tfw-faq-description,
+  .tfw-final-description,
+  .tfw-footer-cta-title {
+    text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  .tfw-serve-top {
-    display: block !important;
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-    row-gap: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .tfw-about-kicker,
+  .tfw-values-kicker,
+  .tfw-brands-kicker,
+  .tfw-serve-kicker,
+  .tfw-mission-label,
+  .tfw-mission-v2-label,
+  .tfw-faq-kicker {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .tfw-serve-copy {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
+  .hero-contact-button,
+  .tfw-about-cta,
+  .tfw-work-button,
+  .tfw-mission-v2-button,
+  .tfw-faq-contact {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .tfw-serve-list {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /*
-    REMOVE THE ACTUAL 470PX RESERVED BOX.
-    Desktop keeps the image; phones do not.
-  */
-  .tfw-serve-visual,
-  .tfw-serve.is-visible .tfw-serve-visual {
-    display: none !important;
-    min-height: 0 !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Pull the mission/photo section directly underneath */
-  .tfw-mission,
-  .tfw-mission-v2 {
-    margin-top: 24px !important;
-  }
-
-  .tfw-mission-v2 {
-    padding-top: 34px !important;
-  }
-}
-
-@media (max-width: 430px) {
-  .tfw-serve {
-    padding-bottom: 26px !important;
-  }
-
-  .tfw-mission,
-  .tfw-mission-v2 {
-    margin-top: 16px !important;
-  }
-
-  .tfw-mission-v2 {
-    padding-top: 28px !important;
-  }
-}\n/* =========================================================\n   FINAL iOS-SAFE ARROWS — NO UNICODE / NO EMOJI GLYPHS\n========================================================= */\n.menu-arrow,\n.hero-contact-arrow,\n.tfw-about-cta > span:last-child,\n.tfw-mission-v2-button-arrow,\n.tfw-faq-contact > span:last-child,\n.tfw-footer-arrow-link > span,\n.tfw-final-contact-link > span:last-child {\n  position: relative !important;\n  display: inline-block !important;\n  width: 18px !important;\n  height: 18px !important;\n  min-width: 18px !important;\n  flex: 0 0 18px !important;\n  font-size: 0 !important;\n  line-height: 0 !important;\n  color: inherit !important;\n  overflow: visible !important;\n}\n\n.menu-arrow::before,\n.hero-contact-arrow::before,\n.tfw-about-cta > span:last-child::before,\n.tfw-mission-v2-button-arrow::before,\n.tfw-faq-contact > span:last-child::before,\n.tfw-footer-arrow-link > span::before,\n.tfw-final-contact-link > span:last-child::before {\n  content: '' !important;\n  position: absolute !important;\n  left: 2px !important;\n  top: 9px !important;\n  width: 15px !important;\n  height: 1px !important;\n  background: currentColor !important;\n  transform: rotate(-45deg) !important;\n  transform-origin: center !important;\n}\n\n.menu-arrow::after,\n.hero-contact-arrow::after,\n.tfw-about-cta > span:last-child::after,\n.tfw-mission-v2-button-arrow::after,\n.tfw-faq-contact > span:last-child::after,\n.tfw-footer-arrow-link > span::after,\n.tfw-final-contact-link > span:last-child::after {\n  content: '' !important;\n  position: absolute !important;\n  top: 1px !important;\n  right: 0 !important;\n  width: 8px !important;\n  height: 8px !important;\n  border-top: 1px solid currentColor !important;\n  border-right: 1px solid currentColor !important;\n}\n
-
-/* =========================================================
-   FINAL ARROW FIX — INLINE SVG, NO EMOJI, IPHONE SAFE
-========================================================= */
-
-.tfw-arrow-svg {
-  display: inline-block !important;
-  width: 18px !important;
-  height: 18px !important;
-  min-width: 18px !important;
-  flex: 0 0 18px !important;
-  overflow: visible !important;
-  color: currentColor !important;
-  fill: none !important;
-  stroke: currentColor !important;
-  stroke-width: 1.6 !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-  vertical-align: middle !important;
-}
-
-.tfw-arrow-svg path {
-  fill: none !important;
-  stroke: currentColor !important;
-}
-
-/* Prevent any old pseudo-arrow rules from drawing extra icons. */
-.tfw-arrow-svg::before,
-.tfw-arrow-svg::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Keep arrows visible inside all CTA/button states. */
-.hero-contact-button .tfw-arrow-svg,
-.tfw-about-cta .tfw-arrow-svg,
-.tfw-work-button .tfw-arrow-svg,
-.tfw-mission-v2-button .tfw-arrow-svg,
-.tfw-faq-contact .tfw-arrow-svg,
-.tfw-footer-arrow-link .tfw-arrow-svg,
-.tfw-final-contact-link .tfw-arrow-svg,
-.menu-item .tfw-arrow-svg {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Slight movement on hover, but never hide it. */
-.hero-contact-button:hover .tfw-arrow-svg,
-.tfw-about-cta:hover .tfw-arrow-svg,
-.tfw-work-button:hover .tfw-arrow-svg,
-.tfw-mission-v2-button:hover .tfw-arrow-svg,
-.tfw-faq-contact:hover .tfw-arrow-svg,
-.tfw-footer-arrow-link:hover .tfw-arrow-svg,
-.tfw-final-contact-link:hover .tfw-arrow-svg,
-.menu-item:hover .tfw-arrow-svg {
-  transform: translateX(3px) !important;
-}
-
-/* =========================================================
-   FINAL MOBILE NUMBER ALIGNMENT FIX
-   Numbers are decorative metadata and must NOT offset copy.
-========================================================= */
-
-@media (max-width: 760px) {
-
-  /* VALUES / "WHAT WE STAND FOR" */
-  .tfw-value,
-  .tfw-values .tfw-value {
+  /* -----------------------------------------
+     VALUES: number is decorative, not a column
+  ----------------------------------------- */
+  .tfw-value {
     position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;
+    gap: 10px !important;
+    padding: 34px 36px 32px !important;
+    min-height: 0 !important;
     text-align: center !important;
-    padding-left: 34px !important;
-    padding-right: 34px !important;
   }
 
   .tfw-value-number {
     position: absolute !important;
-    left: 0 !important;
+    left: 4px !important;
     top: 38px !important;
     width: 24px !important;
     margin: 0 !important;
@@ -1979,50 +1971,31 @@ text {
   .tfw-value-title,
   .tfw-value-description {
     width: 100% !important;
-    max-width: 34ch !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
+  }
+
+  .tfw-value-description {
+    max-width: 34ch !important;
+  }
+
+  .tfw-value-mark {
     align-self: center !important;
+    justify-self: center !important;
+    margin: 8px auto 0 !important;
   }
 
-  .tfw-value-title {
-    max-width: 100% !important;
-  }
-
-  /* WHO WE SERVE */
-  .tfw-serve-item {
+  /* -----------------------------------------
+     ABOUT SPECS: number does not push copy
+  ----------------------------------------- */
+  .tfw-about-spec {
     position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;
-    padding-left: 34px !important;
-    padding-right: 34px !important;
-    text-align: center !important;
-  }
-
-  .tfw-serve-number {
-    position: absolute !important;
-    left: 4px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 22px !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-
-  .tfw-serve-item > span:last-child {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-  }
-
-  /* ABOUT / SPECIFICATION ROWS */
-  .tfw-about-spec {
-    position: relative !important;
+    gap: 5px !important;
     width: 100% !important;
     padding-left: 34px !important;
     padding-right: 34px !important;
@@ -2047,9 +2020,88 @@ text {
     text-align: center !important;
   }
 
-  /* FAQ NUMBERS */
+  /* -----------------------------------------
+     WHO WE SERVE
+     Keep the original masonry.jpeg photo.
+     Remove the huge reserved 470px dead block.
+  ----------------------------------------- */
+  .tfw-serve {
+    padding-bottom: 42px !important;
+  }
+
+  .tfw-serve-top {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 26px !important;
+    margin: 0 !important;
+  }
+
+  .tfw-serve-item {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 62px !important;
+    padding-left: 34px !important;
+    padding-right: 34px !important;
+    gap: 4px !important;
+    text-align: center !important;
+  }
+
+  .tfw-serve-number {
+    position: absolute !important;
+    left: 4px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 22px !important;
+    text-align: left !important;
+  }
+
+  .tfw-serve-item > span:last-child {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .tfw-serve-visual,
+  .tfw-serve.is-visible .tfw-serve-visual {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    overflow: hidden !important;
+  }
+
+  .tfw-serve-photo,
+  .tfw-serve.is-visible .tfw-serve-photo {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .tfw-mission-v2 {
+    margin-top: 28px !important;
+  }
+
+  /* -----------------------------------------
+     FAQ: number does not push question text
+  ----------------------------------------- */
   .tfw-faq-question {
     position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 100% !important;
     padding-left: 38px !important;
     padding-right: 38px !important;
@@ -2066,24 +2118,18 @@ text {
     text-align: left !important;
   }
 
-  .tfw-faq-question-text {
+  .tfw-faq-question-text,
+  .tfw-faq-answer p {
     width: 100% !important;
-    margin: 0 auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     text-align: center !important;
   }
-}
 
-@media (max-width: 430px) {
-  .tfw-value,
-  .tfw-values .tfw-value,
-  .tfw-serve-item,
-  .tfw-about-spec {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-
-  .tfw-faq-question {
-    padding-left: 34px !important;
-    padding-right: 34px !important;
+  .tfw-faq-plus {
+    position: absolute !important;
+    right: 5px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
   }
 }
