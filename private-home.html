@@ -2235,6 +2235,67 @@
 
 </style>
 <style>\n/* =========================================================\n   FINAL iOS-SAFE ARROWS — NO UNICODE / NO EMOJI GLYPHS\n========================================================= */\n.menu-arrow,\n.hero-contact-arrow,\n.tfw-about-cta > span:last-child,\n.tfw-mission-v2-button-arrow,\n.tfw-faq-contact > span:last-child,\n.tfw-footer-arrow-link > span,\n.tfw-final-contact-link > span:last-child {\n  position: relative !important;\n  display: inline-block !important;\n  width: 18px !important;\n  height: 18px !important;\n  min-width: 18px !important;\n  flex: 0 0 18px !important;\n  font-size: 0 !important;\n  line-height: 0 !important;\n  color: inherit !important;\n  overflow: visible !important;\n}\n\n.menu-arrow::before,\n.hero-contact-arrow::before,\n.tfw-about-cta > span:last-child::before,\n.tfw-mission-v2-button-arrow::before,\n.tfw-faq-contact > span:last-child::before,\n.tfw-footer-arrow-link > span::before,\n.tfw-final-contact-link > span:last-child::before {\n  content: '' !important;\n  position: absolute !important;\n  left: 2px !important;\n  top: 9px !important;\n  width: 15px !important;\n  height: 1px !important;\n  background: currentColor !important;\n  transform: rotate(-45deg) !important;\n  transform-origin: center !important;\n}\n\n.menu-arrow::after,\n.hero-contact-arrow::after,\n.tfw-about-cta > span:last-child::after,\n.tfw-mission-v2-button-arrow::after,\n.tfw-faq-contact > span:last-child::after,\n.tfw-footer-arrow-link > span::after,\n.tfw-final-contact-link > span:last-child::after {\n  content: '' !important;\n  position: absolute !important;\n  top: 1px !important;\n  right: 0 !important;\n  width: 8px !important;\n  height: 8px !important;\n  border-top: 1px solid currentColor !important;\n  border-right: 1px solid currentColor !important;\n}\n</style>
+
+<style>
+
+/* =========================================================
+   FINAL ARROW FIX — INLINE SVG, NO EMOJI, IPHONE SAFE
+========================================================= */
+
+.tfw-arrow-svg {
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  flex: 0 0 18px !important;
+  overflow: visible !important;
+  color: currentColor !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.6 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  vertical-align: middle !important;
+}
+
+.tfw-arrow-svg path {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+/* Prevent any old pseudo-arrow rules from drawing extra icons. */
+.tfw-arrow-svg::before,
+.tfw-arrow-svg::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep arrows visible inside all CTA/button states. */
+.hero-contact-button .tfw-arrow-svg,
+.tfw-about-cta .tfw-arrow-svg,
+.tfw-work-button .tfw-arrow-svg,
+.tfw-mission-v2-button .tfw-arrow-svg,
+.tfw-faq-contact .tfw-arrow-svg,
+.tfw-footer-arrow-link .tfw-arrow-svg,
+.tfw-final-contact-link .tfw-arrow-svg,
+.menu-item .tfw-arrow-svg {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Slight movement on hover, but never hide it. */
+.hero-contact-button:hover .tfw-arrow-svg,
+.tfw-about-cta:hover .tfw-arrow-svg,
+.tfw-work-button:hover .tfw-arrow-svg,
+.tfw-mission-v2-button:hover .tfw-arrow-svg,
+.tfw-faq-contact:hover .tfw-arrow-svg,
+.tfw-footer-arrow-link:hover .tfw-arrow-svg,
+.tfw-final-contact-link:hover .tfw-arrow-svg,
+.menu-item:hover .tfw-arrow-svg {
+  transform: translateX(3px) !important;
+}
+
+</style>
 </head>
 
 
@@ -2289,7 +2350,16 @@
       <div class="header-right">
         <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
           <span class="menu-lines" aria-hidden="true">
-            <span></span><span></span><span></span>
+            <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg>
           </span>
         </button>
       </div>
@@ -2301,11 +2371,26 @@
       <div class="menu-panel">
         <div class="menu-inner">
           <nav class="menu-nav" aria-label="Main navigation">
-            <a class="menu-item" href="index.html"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow"></span></a>
-            <a class="menu-item" href="#about"><span class="menu-num">02</span><span class="menu-text">About</span><span class="menu-arrow"></span></a>
-            <a class="menu-item" href="work.html"><span class="menu-num">03</span><span class="menu-text">Work</span><span class="menu-arrow"></span></a>
-            <a class="menu-item" href="faq.html"><span class="menu-num">04</span><span class="menu-text">FAQ</span><span class="menu-arrow"></span></a>
-            <a class="menu-item" href="contact.html"><span class="menu-num">05</span><span class="menu-text">Contact</span><span class="menu-arrow"></span></a>
+            <a class="menu-item" href="index.html"><span class="menu-num">01</span><span class="menu-text">Home</span><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
+            <a class="menu-item" href="#about"><span class="menu-num">02</span><span class="menu-text">About</span><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
+            <a class="menu-item" href="work.html"><span class="menu-num">03</span><span class="menu-text">Work</span><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
+            <a class="menu-item" href="faq.html"><span class="menu-num">04</span><span class="menu-text">FAQ</span><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
+            <a class="menu-item" href="contact.html"><span class="menu-num">05</span><span class="menu-text">Contact</span><svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
           </nav>
         </div>
       </div>
@@ -2339,7 +2424,10 @@
 
       <a href="contact.html" class="hero-contact-button">
         <span>Contact Now</span>
-        <span class="hero-contact-arrow"></span>
+        <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg>
       </a>
 
 
@@ -4235,7 +4323,10 @@
 
         Start a Project
 
-        <span></span>
+        <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg>
 
       </a>
 
@@ -8616,7 +8707,10 @@
               View Our Work
             </span>
 
-            <span class="tfw-mission-v2-button-arrow"></span>
+            <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg>
 
           </a>
 
@@ -9405,7 +9499,10 @@
         From choosing the right fireplace to planning installation, venting and finishing details,
         we help make the process straightforward from the very beginning.
       </p>
-      <a href="contact.html" class="tfw-faq-contact">Ask us a question <span></span></a>
+      <a href="contact.html" class="tfw-faq-contact">Ask us a question <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
     </div>
 
     <div class="tfw-faq-list">
@@ -9853,7 +9950,10 @@
       </div>
 
       <a href="contact.html" class="tfw-footer-arrow-link" aria-label="Start a project">
-        <span></span>
+        <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg>
       </a>
     </div>
 
@@ -9886,7 +9986,10 @@
         <div class="tfw-final-contact">
           <span>Dallas Fort Worth, Texas</span>
           <span>Fireplace Consultation</span>
-          <a href="contact.html" class="tfw-final-contact-link">Contact Us <span></span></a>
+          <a href="contact.html" class="tfw-final-contact-link">Contact Us <svg class="tfw-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="M13 7l5 5-5 5"></path>
+</svg></a>
         </div>
       </div>
     </div>
