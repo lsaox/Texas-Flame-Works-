@@ -1326,3 +1326,564 @@ text {
   }
 
 }
+
+/* =========================================================
+   TEXAS FLAME WORKS — FINAL MOBILE POLISH
+   - Removes iPhone emoji arrows by drawing arrows with CSS
+   - Centers mobile headings/copy/buttons
+   - Removes the large dead gap under "Built for the people
+     building Texas."
+========================================================= */
+
+
+/* =========================================================
+   1. NON-EMOJI ARROWS
+   Pure CSS arrow icon so iPhone cannot swap it for an emoji.
+========================================================= */
+
+.tfw-css-arrow {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+}
+
+.tfw-css-arrow::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 3px;
+  width: 13px;
+  height: 1px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.tfw-css-arrow::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+
+/* Hide the original glyph inside known arrow buttons/links. */
+.hero-contact-arrow,
+.menu-arrow,
+.tfw-work-arrow,
+.tfw-about-cta > span:last-child,
+.tfw-mission-v2-button > span:last-child,
+.tfw-faq-contact > span:last-child,
+.tfw-footer-arrow-link > span,
+.tfw-final-contact-link > span:last-child,
+.nav-contact > span:last-child {
+  position: relative !important;
+  display: inline-block !important;
+  width: 17px !important;
+  height: 17px !important;
+  min-width: 17px !important;
+  overflow: hidden !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+
+/* Draw the replacement arrow. */
+.hero-contact-arrow::before,
+.menu-arrow::before,
+.tfw-work-arrow::before,
+.tfw-about-cta > span:last-child::before,
+.tfw-mission-v2-button > span:last-child::before,
+.tfw-faq-contact > span:last-child::before,
+.tfw-footer-arrow-link > span::before,
+.tfw-final-contact-link > span:last-child::before,
+.nav-contact > span:last-child::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 2px !important;
+  bottom: 3px !important;
+  width: 13px !important;
+  height: 1px !important;
+  background: currentColor !important;
+  background-color: currentColor !important;
+  transform: rotate(-45deg) !important;
+  transform-origin: center !important;
+}
+
+
+/* Because the text itself is transparent, give the pseudo icon
+   its own inherited visible color. */
+.hero-contact-arrow::before,
+.menu-arrow::before,
+.tfw-work-arrow::before,
+.tfw-about-cta > span:last-child::before,
+.tfw-mission-v2-button > span:last-child::before,
+.tfw-faq-contact > span:last-child::before,
+.tfw-footer-arrow-link > span::before,
+.tfw-final-contact-link > span:last-child::before,
+.nav-contact > span:last-child::before {
+  background: #fff !important;
+}
+
+.tfw-about-cta > span:last-child::before,
+.tfw-work-arrow::before,
+.tfw-mission-v2-button > span:last-child::before {
+  background: currentColor !important;
+}
+
+
+/* Arrow head */
+.hero-contact-arrow::after,
+.menu-arrow::after,
+.tfw-work-arrow::after,
+.tfw-about-cta > span:last-child::after,
+.tfw-mission-v2-button > span:last-child::after,
+.tfw-faq-contact > span:last-child::after,
+.tfw-footer-arrow-link > span::after,
+.tfw-final-contact-link > span:last-child::after,
+.nav-contact > span:last-child::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 2px !important;
+  right: 1px !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-top: 1px solid #fff !important;
+  border-right: 1px solid #fff !important;
+}
+
+
+/* Dark-text / light-button states */
+.hero-contact-button:hover .hero-contact-arrow::before {
+  background: #090908 !important;
+}
+.hero-contact-button:hover .hero-contact-arrow::after {
+  border-color: #090908 !important;
+}
+
+.tfw-footer-arrow-link:hover > span::before {
+  background: currentColor !important;
+}
+.tfw-footer-arrow-link:hover > span::after {
+  border-color: currentColor !important;
+}
+
+
+/* =========================================================
+   2. MOBILE — CENTER EVERYTHING
+========================================================= */
+
+@media (max-width: 760px) {
+
+  /* Main text blocks */
+  .hero-content,
+  .tfw-about-copy,
+  .tfw-values-intro,
+  .tfw-values-top,
+  .tfw-brands-header,
+  .tfw-brands-copy,
+  .tfw-serve-copy,
+  .tfw-mission-content,
+  .tfw-mission-v2-copy,
+  .tfw-faq-intro,
+  .tfw-final-footer,
+  .tfw-final-footer-inner,
+  .tfw-footer-content,
+  .tfw-footer-cta {
+    text-align: center !important;
+  }
+
+
+  /* Kicker / eyebrow labels */
+  .hero-kicker,
+  .tfw-about-kicker,
+  .tfw-values-kicker,
+  .tfw-brands-kicker,
+  .tfw-serve-kicker,
+  .tfw-mission-label,
+  .tfw-mission-v2-label,
+  .tfw-faq-kicker,
+  .tfw-footer-eyebrow {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+  /* Headlines + paragraphs */
+  .hero-title,
+  .hero-description,
+  .tfw-about-title,
+  .tfw-about-lead,
+  .tfw-about-body,
+  .tfw-values-title,
+  .tfw-values-description,
+  .tfw-value-title,
+  .tfw-value-description,
+  .tfw-brands-title,
+  .tfw-brands-copy,
+  .tfw-serve-title,
+  .tfw-mission-title,
+  .tfw-mission-text,
+  .tfw-mission-v2-title,
+  .tfw-mission-v2-text,
+  .tfw-faq-title,
+  .tfw-faq-description,
+  .tfw-final-description,
+  .tfw-footer-cta-title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+  /* About specification rows */
+  .tfw-about-specs {
+    width: 100% !important;
+  }
+
+  .tfw-about-spec {
+    text-align: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+  }
+
+  .tfw-about-spec-number,
+  .tfw-about-spec-title,
+  .tfw-about-spec-description {
+    text-align: center !important;
+  }
+
+
+  /* Values cards */
+  .tfw-values-list,
+  .tfw-value {
+    text-align: center !important;
+  }
+
+  .tfw-value {
+    justify-items: center !important;
+  }
+
+
+  /* Who We Serve rows */
+  .tfw-serve-list {
+    width: 100% !important;
+  }
+
+  .tfw-serve-item {
+    grid-template-columns: auto auto !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+
+  .tfw-serve-item span:last-child {
+    text-align: center !important;
+  }
+
+
+  /* Buttons */
+  .hero-contact-button,
+  .tfw-about-cta,
+  .tfw-work-button,
+  .tfw-mission-v2-button,
+  .tfw-faq-contact {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+  /* FAQ */
+  .tfw-faq-question {
+    position: relative !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    padding-left: 34px !important;
+    padding-right: 34px !important;
+  }
+
+  .tfw-faq-number {
+    margin-bottom: 5px !important;
+  }
+
+  .tfw-faq-question-text {
+    text-align: center !important;
+  }
+
+  .tfw-faq-plus {
+    position: absolute !important;
+    right: 5px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .tfw-faq-answer p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 34ch !important;
+    text-align: center !important;
+  }
+
+
+  /* Footer */
+  .tfw-footer-cta {
+    align-items: center !important;
+    justify-items: center !important;
+  }
+
+  .tfw-final-brandmark {
+    justify-content: center !important;
+  }
+
+  .tfw-final-nav {
+    align-items: center !important;
+  }
+
+  .tfw-final-contact {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .tfw-final-bottom,
+  .tfw-final-bottom-right {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+
+  /* =======================================================
+     3. REMOVE DEAD BLACK SPACE UNDER WHO WE SERVE
+     The old mobile layout had a 70px grid gap plus generous
+     section spacing. Tighten it so the photo/next content
+     begins right after the list.
+  ======================================================= */
+
+  .tfw-serve-top {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    row-gap: 24px !important;
+    align-items: start !important;
+  }
+
+  .tfw-serve-copy {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .tfw-serve-list {
+    margin-bottom: 0 !important;
+  }
+
+  .tfw-serve-visual {
+    margin-top: 0 !important;
+  }
+
+  .tfw-serve {
+    padding-bottom: 58px !important;
+  }
+
+  .tfw-mission,
+  .tfw-mission-v2 {
+    margin-top: 42px !important;
+  }
+}
+
+
+/* Extra-tight phone tuning */
+@media (max-width: 430px) {
+
+  .tfw-serve-top {
+    gap: 18px !important;
+    row-gap: 18px !important;
+  }
+
+  .tfw-serve {
+    padding-bottom: 46px !important;
+  }
+
+  .tfw-mission,
+  .tfw-mission-v2 {
+    margin-top: 34px !important;
+  }
+}
+
+/* =========================================================
+   CRITICAL MOBILE WHO-WE-SERVE GAP FIX
+   The original section reserves ~470px for .tfw-serve-visual
+   on mobile while that element can still be clipped/hidden by
+   its entrance animation. This forces it to render normally
+   and removes the giant black reserved block.
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .tfw-serve {
+    padding-bottom: 42px !important;
+  }
+
+  .tfw-serve-inner {
+    width: calc(100% - 32px) !important;
+  }
+
+  .tfw-serve-top {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    row-gap: 24px !important;
+  }
+
+  .tfw-serve-copy {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .tfw-serve-list {
+    margin: 0 !important;
+  }
+
+  /* This was the source of the giant empty block. */
+  .tfw-serve-visual,
+  .tfw-serve.is-visible .tfw-serve-visual {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    margin: 0 !important;
+
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+
+    overflow: hidden !important;
+  }
+
+  .tfw-serve-photo,
+  .tfw-serve.is-visible .tfw-serve-photo {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Keep the mission close to the section above it. */
+  .tfw-mission-v2 {
+    margin-top: 28px !important;
+    padding-top: 42px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .tfw-serve-top {
+    gap: 18px !important;
+  }
+
+  .tfw-serve-visual,
+  .tfw-serve.is-visible .tfw-serve-visual {
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .tfw-mission-v2 {
+    margin-top: 20px !important;
+    padding-top: 34px !important;
+  }
+}
+
+/* =========================================================
+   FINAL HARD FIX — REMOVE MOBILE DEAD SPACE
+   This intentionally hides the separate Who We Serve image
+   on phones because its reserved 470px box was creating the
+   giant empty black block before the mission section.
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .tfw-serve {
+    padding-bottom: 34px !important;
+  }
+
+  .tfw-serve-inner {
+    width: calc(100% - 32px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .tfw-serve-top {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    row-gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tfw-serve-copy {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .tfw-serve-list {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /*
+    REMOVE THE ACTUAL 470PX RESERVED BOX.
+    Desktop keeps the image; phones do not.
+  */
+  .tfw-serve-visual,
+  .tfw-serve.is-visible .tfw-serve-visual {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Pull the mission/photo section directly underneath */
+  .tfw-mission,
+  .tfw-mission-v2 {
+    margin-top: 24px !important;
+  }
+
+  .tfw-mission-v2 {
+    padding-top: 34px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .tfw-serve {
+    padding-bottom: 26px !important;
+  }
+
+  .tfw-mission,
+  .tfw-mission-v2 {
+    margin-top: 16px !important;
+  }
+
+  .tfw-mission-v2 {
+    padding-top: 28px !important;
+  }
+}
